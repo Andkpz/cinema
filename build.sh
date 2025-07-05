@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # exit on error
-set -o errexit
+
 
 # Установка Python зависимостей
 pip install -r requirements.txt

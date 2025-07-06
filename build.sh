@@ -11,6 +11,7 @@ python manage.py collectstatic --no-input --clear
 # Сборка фронтенда
 cd frontend
 npm install
+npm install unplugin-vue-components --save-dev
 npm run build
 cd ..
 

@@ -60,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'cinema_backend.urls'
@@ -149,3 +150,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # this is for production
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'frontend/dist/static'),  # if you're using Vue
 ]
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
